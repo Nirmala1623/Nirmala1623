@@ -1,0 +1,32 @@
+#frequency of a number 
+user_input = list(map(int,input().split(" ")))
+
+length_user_input = len(user_input)
+dict_items = dict()
+
+list_new = []
+for item in user_input:
+    count = 0 
+    for i in range(length_user_input):
+        if((item == user_input[i]) ):
+            count = count + 1 
+    dict_items[str(item)] = count
+print(dict_items)
+dict_keys = dict_items.keys()
+print(dict_keys)
+dict_values = dict_items.values()
+print(dict_values)
+list_keys = list(dict_keys)
+list_values = list(dict_values)
+max_value = max(list_values)
+list_a = []
+for i in range(len(list_values)):
+    if(list_values[i] == max_value):
+        list_a.append(list_keys[i])
+        
+        
+result = ""
+for i in list_a:
+    result = result + str(i) + " "
+    
+print(result)
